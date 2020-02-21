@@ -1,4 +1,4 @@
-// Use D3 fetch to read the JSON file
+/// Use D3 fetch to read the JSON file
 // The data from the JSON file is arbitrarily named importedData as the argument
 d3.json("data/data.json").then((importedData) => {
   // console.log(importedData);
@@ -6,21 +6,21 @@ d3.json("data/data.json").then((importedData) => {
 
   // Sort the data array using the greekSearchResults value
   data.sort(function(a, b) {
-    return parseFloat(b.Deaths) - parseFloat(a.Deaths);
+    return parseFloat(b.deaths) - parseFloat(a.deaths);
   });
 
   // Slice the first 10 objects for plotting
-  data = data.slice(0, 10);
+  data = data.slice(0, 1000);
 
   // Reverse the array due to Plotly's defaults
   data = data.reverse();
 
   // Trace1 for the Greek Data
   var trace1 = {
-    x: data.map(row => row.Deaths),
-    y: data.map(row => row.LeadingCause),
-    text: data.map(row => row.LeadingCause),
-    name: "NYCOD",
+    x: data.map(row => row.deaths),
+    y: data.map(row => row.leading_cause),
+    text: data.map(row => row.leading_cause),
+    name: "NYC_COD",
     type: "bar",
     orientation: "h"
   };
@@ -30,12 +30,12 @@ d3.json("data/data.json").then((importedData) => {
 
   // Apply the group bar mode to the layout
   var layout = {
-    title: "Causes of Deathg in NYC",
+    title: "Causes of Death in NYC",
     margin: {
-      l: 100,
-      r: 100,
-      t: 100,
-      b: 100
+      l: 550,
+      r: 10,
+      t: 50,
+      b: 20
     }
   };
 
