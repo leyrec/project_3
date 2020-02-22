@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Causes of Death in NYC</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Causes of Death in NYC </title>
+  <!-- to load CSS recommended from bootstrap to copy the link bellow ("https://getbootstrap.com/docs/4.4/getting-started/introduction/>)-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Bootstrap Visualization Dashboard</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 </head>
+
 <body>
-    <div id="plot"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-    <script src="plots.js"></script>
+  <div class="container-fluid">
+          <div class="jumbotron text-center" style="background-color: rgb(46, 43, 40);">
+            <h1 style= "font-family:monospace; font-size:60px; color: white;"><strong>CAUSES OF DEATH <br>IN NYC</strong></h1>
+          </div>
+          <img src="images/nyc.jpg" class="card-img-top" alt="Responsive image">
+
+          <div class="container-fluid" style="background-color: rgb(119, 118, 117);">
+            <div class="row" style="padding-top: 30px;">
+              <div class="col-lg-12">
+                  <!-- Left Content Box -->
+                  <div class="box text-center" style="padding-bottom: 20px;">
+                      <h2 style="color: white; font-family:monospace; font-size:40px; justify-content: center ;"><strong>Total Number of Deaths<br>by Leading Cause in 2007-2014</strong></h2>
+                      <hr style= "border: 2px solid white;">       
+                      <div id="plot_1" alt="Responsive Graph"></div>
+  </div>  
+
+  <div class="container-fluid" style="background-color: rgb(119, 118, 117);">
+            <div class="row" style="padding-top: 30px;">
+              <div class="col-lg-12">
+                  <!-- Left Content Box -->
+                  <div class="box text-center" style="padding-bottom: 20px;">
+                      <h2 style="color: white; font-family:monospace; font-size:40px; justify-content: center ;"><strong>Total Number of Main Cause's Deaths Over Time<br>by Gender and Ethnicity</strong></h2>
+                      <hr style= "border: 2px solid white;">
+                      <div class="container">
+                        <div class="row" style="padding-bottom: 30px;">
+                            <div class="col-lg-6">
+                              <img class="img-fluid" src="images/gender.png" alt="Max Temperature Graph">
+                            </div>
+                            <div class="col-lg-6">
+                              <img class="img-fluid" src="images/ethnicity.png" alt="Humidity Graph">
+                            </div>
+                        </div>
+                        <div class="row" style="padding-bottom: 30px;">
+                            <div class="col-lg-6">                       
+                              <img class="img-fluid" src="images/gender2.png" alt="Cloudiness Graph">                        
+                            </div>
+                            <div class="col-lg-6">                       
+                              <img class="img-fluid" src="images/ethnicity2.png" alt="Wind Speed Graph">
+                            </div>
+                        </div> 
+                  </div> 
+                </div> 
+            </div>                          
+  </div>
+
+  <!-- to load CSS recommended from bootstrap to copy the link bellow ("https://getbootstrap.com/docs/4.4/getting-started/introduction/>)-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
+  <script src="plots.js"></script>
 </body>
+
 </html>

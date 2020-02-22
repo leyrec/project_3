@@ -4,23 +4,23 @@ d3.json("data/data.json").then((importedData) => {
   // console.log(importedData);
   var data = importedData;
 
-  // Sort the data array using the greekSearchResults value
+  // Sort the data array using the years value
   data.sort(function(a, b) {
     return parseFloat(b.deaths) - parseFloat(a.deaths);
   });
 
-  // Slice the first 10 objects for plotting
+  // Slice the first 1000 objects for plotting
   data = data.slice(0, 1000);
 
   // Reverse the array due to Plotly's defaults
   data = data.reverse();
 
-  // Trace1 for the Greek Data
+  // Trace1 for the NYC Data
   var trace1 = {
     x: data.map(row => row.deaths),
     y: data.map(row => row.leading_cause),
     text: data.map(row => row.leading_cause),
-    name: "NYC_COD",
+    name: "NYCOD",
     type: "bar",
     orientation: "h"
   };
@@ -30,15 +30,29 @@ d3.json("data/data.json").then((importedData) => {
 
   // Apply the group bar mode to the layout
   var layout = {
-    title: "Causes of Death in NYC",
+    title: " ",
     margin: {
       l: 550,
       r: 10,
       t: 50,
-      b: 20
+      b: 50
     }
   };
 
   // Render the plot to the div tag with id "plot"
-  Plotly.newPlot("plot", chartData, layout);
+  Plotly.newPlot("plot_1", chartData, layout);
+
+
+
+
 });
+
+
+
+
+
+
+
+
+
+
